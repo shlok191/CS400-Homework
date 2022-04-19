@@ -1,0 +1,62 @@
+<html>
+    
+    <head>
+        <title>Binary Search</title>
+        
+        <meta name="author" content="Name: Shlok Sabarwal, CS_username: sabarwal">
+    </head>
+
+    <body>
+        
+        <h1>Binary Search</h1>
+        <hr>
+        <h2>Description</h2>
+        <p>Binary search is a searching algorithm that is capable of finding a value
+        inside a sorted list in <b>O(logN)</b>  time complexity. It is often quite
+        necessary to search for a value inside huge lots of data, and binary search
+        provides a time and memory cheap method of doing so. If a list of integers
+        is simply <b>kept sorted as it grows</b>, searching an element will always have
+        O(logN) time complexity.</p>
+
+        <p>An alternative to binary searching a list is maintaining a Map data structure
+        that provides O(1) lookup time, but only on the cost of memory. This is exactly
+        why binary search is neat!</p>
+        
+        <h3>Below are the steps for Binary Search: </h3>
+        
+        <ol>
+            <li> Input search element from user</li>
+            <li> Locate the middle-most element inside the sorted list</li>
+            <li> Compare the element to be found with the middle-most element</li>
+            <li> If the element is the one that is being searched, return it!</li>
+            <li> Otherwise, check if the element to be searched is bigger or smaller than the element it was compared to</li>
+            <li> 
+                <ul>
+                    <li>If smaller, repeat steps 2, 3, 4, 5, 6 for the left sublist</li>
+                    <li> If bigger, repeat steps 2, 3, 4, 5, 6 for the left sublist</li>
+                </ul>
+            </li>
+            <li>
+                Repeat the process until the element being searched is found or if the sublist is 1-item big
+            </li>
+            <li>
+                If the 1-item sublist does not contain the item, indicate that the item is not present!
+            </li>
+        </ol>
+        <h2>Example Implementation</h2>
+
+        <img src="array.png" alt="Sorted array">
+
+        <p>Let us search for element 2!</p>
+        <ol>
+            <li>Middle Most Element of Array: 5</li>
+            <li>Comparing 2 and 5 shows that 3 < 5</li>
+            <li>Re-implementing Binary Search on left part of array (element 0 to 2)</li>
+            <li>Middle most element is on index (0+2)/2 = 1, which is 2</li>
+            <li>Comparing 2 and 2 shows that the element was found!</li>
+            <li>Returning index of element to be found: 1</li>
+        </ol>
+
+        <p>More information on binary search can be found here: <a href="https://www.geeksforgeeks.org/binary-search/">Binary Search by GeeksForGeeks</a></p>
+    </body>
+</html>
